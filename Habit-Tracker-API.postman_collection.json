@@ -1,0 +1,138 @@
+{
+  "info": {
+    "_postman_id": "8f3b6c2d-9e1a-4cfa-8b5e-f7d1a2c3b4e5",
+    "name": "Habit Tracker API",
+    "description": "Collection for testing the Habit Tracker full-stack application endpoints.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Create Habit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"name\": \"Drink 2L water\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/habits",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Habits",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/habits",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Check In Habit",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"date\": \"2026-07-06\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/habits/1/checkin",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits",
+            "1",
+            "checkin"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Habit Checkins",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/habits/1/checkins",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits",
+            "1",
+            "checkins"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Remove Checkin",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/habits/1/checkin/2026-07-06",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits",
+            "1",
+            "checkin",
+            "2026-07-06"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Delete Habit",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "{{baseUrl}}/habits/1",
+          "host": [
+            "{{baseUrl}}"
+          ],
+          "path": [
+            "habits",
+            "1"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
